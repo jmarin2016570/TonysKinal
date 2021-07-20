@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="616.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.ProductoController">
+   <children>
+      <Label layoutX="272.0" layoutY="40.0" text="Productos">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="108.0" text="Codigo Producto">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="157.0" prefHeight="25.0" prefWidth="155.0" text="Nombre Producto">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="200.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoProducto" layoutX="198.0" layoutY="108.0" />
+      <TextField fx:id="txtNombreProducto" layoutX="198.0" layoutY="157.0" />
+      <TextField fx:id="txtCantidad" layoutX="198.0" layoutY="200.0" />
+      <TableView fx:id="tblProductos" layoutX="8.0" layoutY="238.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="101.0" text="Codigo Producto" />
+          <TableColumn fx:id="colNombreProducto" prefWidth="375.0" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidad" prefWidth="123.0" text="Cantidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="454.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="68.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="101.0" layoutY="454.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="46.0" prefWidth="68.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="432.0" layoutY="454.0" mnemonicParsing="false" onAction="#editar" prefHeight="46.0" prefWidth="68.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="520.0" layoutY="454.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="46.0" prefWidth="68.0" text="Reporte" />
+      <ImageView fitHeight="121.0" fitWidth="149.0" layoutX="487.0" layoutY="12.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image></ImageView>
+   </children>
+</AnchorPane>

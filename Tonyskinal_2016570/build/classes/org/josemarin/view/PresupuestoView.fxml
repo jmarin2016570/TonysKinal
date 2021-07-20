@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="600.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.PresupuestoController">
+   <children>
+      <Label layoutX="32.0" layoutY="91.0" prefHeight="17.0" prefWidth="115.0" text="Codigo Presupuestos" />
+      <Label layoutX="215.0" layoutY="35.0" prefHeight="25.0" prefWidth="152.0" text="Presupuestos">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoPresupuesto" layoutX="171.0" layoutY="87.0" />
+      <TextField fx:id="txtCantidadPresupuesto" layoutX="171.0" layoutY="117.0" />
+      <Label layoutX="29.0" layoutY="121.0" prefHeight="17.0" prefWidth="121.0" text="Cantidad Presupuesto " />
+      <TableView fx:id="tblPresupuesto" layoutX="15.0" layoutY="159.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="167.0" prefWidth="552.0">
+        <columns>
+            <TableColumn fx:id="colCodigoPresupuesto" prefWidth="122.0" text="Codigo Presupuesto" />
+            <TableColumn fx:id="colFechaSolicitud" prefWidth="99.0" text="Fecha Solicitud" />
+            <TableColumn fx:id="colCantidadPresupuesto" prefWidth="162.0" text="Cantidad Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="168.0" text="Codigo Empresa" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="24.0" layoutY="333.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="41.0" prefWidth="66.0" text="Nuevo">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="342.0" layoutY="91.0" prefHeight="17.0" prefWidth="115.0" text="Fecha Solicitud" />
+      <Label layoutX="342.0" layoutY="121.0" prefHeight="17.0" prefWidth="115.0" text="Codigo Empresa" />
+      <GridPane fx:id="grpFechaSolicitud" layoutX="432.0" layoutY="87.0" prefHeight="25.0" prefWidth="152.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="btnEliminar" layoutX="105.0" layoutY="333.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="41.0" prefWidth="66.0" text="Eliminar">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="433.0" layoutY="333.0" mnemonicParsing="false" onAction="#editar" prefHeight="41.0" prefWidth="66.0" text="Editar">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="508.0" layoutY="333.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="41.0" prefWidth="66.0" text="Reporte">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="433.0" layoutY="117.0" prefWidth="150.0" />
+      <ImageView fitHeight="84.0" fitWidth="82.0" layoutX="29.0" onMouseClicked="#ventanaEmpresas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

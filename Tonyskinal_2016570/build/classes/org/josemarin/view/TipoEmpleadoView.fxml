@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="600.0" style="-fx-background-color: #BDB76B; -fx-border-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.TipoEmpleadoController">
+   <children>
+      <Label layoutX="225.0" layoutY="25.0" prefHeight="38.0" prefWidth="209.0" text="Tipo Empleado">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="84.0" prefHeight="29.0" prefWidth="173.0" text="Codigo Tipo Empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="133.0" prefHeight="29.0" prefWidth="94.0" text="Descripcion">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="214.0" layoutY="86.0" prefHeight="25.0" prefWidth="173.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="214.0" layoutY="135.0" prefHeight="25.0" prefWidth="173.0" />
+      <TableView fx:id="tblEmpleados" layoutX="31.0" layoutY="200.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="163.0" prefWidth="561.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="102.0" text="Codigo" />
+          <TableColumn fx:id="colDescripcion" prefWidth="458.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="8.0" layoutY="369.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="76.0" text="Nuevo">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="96.0" layoutY="369.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="76.0" text="Editar">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="187.0" layoutY="369.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="76.0" text="Eliminar">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReportar" layoutX="292.0" layoutY="369.0" mnemonicParsing="false" onAction="#reporte" prefHeight="38.0" prefWidth="76.0" text="Reporte">
+         <font>
+            <Font name="Impact" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="499.0" onMouseClicked="#menuPrincipal">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="499.0" layoutY="86.0" onMouseClicked="#ventanaEmpleado">
+         <image>
+            <Image url="@../image/ImagenEmpleadoo.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

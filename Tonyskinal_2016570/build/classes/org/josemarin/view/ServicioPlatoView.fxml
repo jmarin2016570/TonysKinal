@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.ServicioHasPlatoController">
+   <children>
+      <Label layoutX="174.0" layoutY="32.0" prefHeight="38.0" prefWidth="287.0" text="Servicio_Has_Platos">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="86.0" prefHeight="25.0" prefWidth="127.0" text="Codigo Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="127.0" prefHeight="25.0" prefWidth="127.0" text="Codigo Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="193.0" layoutY="86.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="193.0" layoutY="127.0" prefWidth="150.0" />
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="14.0" layoutY="176.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="579.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="284.0" text="CódigoServicioEmpleado" />
+          <TableColumn fx:id="colCodigoPlato" minWidth="0.0" prefWidth="294.0" text="Código  Servicio" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="109.0" fitWidth="141.0" layoutX="477.0" layoutY="15.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

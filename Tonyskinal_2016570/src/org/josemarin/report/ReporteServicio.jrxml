@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicio" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41f6a57e-0889-44a2-a166-23f5645e156b">
+	<property name="ireport.zoom" value="1.610510000000001"/>
+	<property name="ireport.x" value="50"/>
+	<property name="ireport.y" value="12"/>
+	<parameter name="CodigoServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_listarReporteServicio($P{CodigoServicio})]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="24" uuid="7cb5c728-1f71-4c81-833c-78799b835cf4"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Marin\\Desktop\\Proyecto Final 2016-570 3\\Tonyskinal_2016570\\src\\org\\josemarin\\image\\Encabezadopng1.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="2" width="110" height="77" uuid="c165ff20-7ab8-47a1-aae6-fbf28747b3b0"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Marin\\Desktop\\Proyecto Final 2016-570 3\\Tonyskinal_2016570\\src\\org\\josemarin\\image\\logo-restaurante.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="61" y="24" width="129" height="25" uuid="38dfc6cf-a54a-4a43-a4e3-8b6ebdacc4f0"/>
+				<textElement>
+					<font fontName="Stencil" size="16"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="131" y="3" width="369" height="32" uuid="f70fd14f-5f9b-429a-9cda-e5fadbae0cd8"/>
+				<textElement>
+					<font fontName="Stencil" size="26"/>
+				</textElement>
+				<text><![CDATA[Reporte De Servicios]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="117" height="20" uuid="5bba09bd-d514-4cc9-974f-de68043db810"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre De La Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="0" width="100" height="20" uuid="ec9c800b-52bf-42f0-ba45-ca86efc4ed79"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="259" y="0" width="122" height="20" uuid="d5dc7a30-fc45-4d26-8c0a-eb05fbf2f4ac"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[telefono De La Empresa]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="400" y="0" width="125" height="20" uuid="2d85454a-9b2e-4daa-bc37-32c3e907ca2a"/>
+				<textElement>
+					<font isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="263" width="100" height="20" uuid="646b8160-a342-45b8-aada-a5f9cb52459a"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="572" height="1" forecolor="#FF9900" uuid="970a81a2-a74f-4149-8678-40187f675823"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="39" width="100" height="20" uuid="21c15608-c61b-497f-bbf8-2d3b7031916e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[fechaServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="39" width="100" height="20" uuid="295d8a35-cbe3-40f3-b190-84655c80ed54"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="39" width="100" height="20" uuid="45f9d7cf-51c1-4126-a7e5-406f996eb7c7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre De Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="39" width="119" height="20" uuid="d819c42c-7a18-400d-b854-3a20539640bc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion De Plato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="15" width="100" height="20" uuid="f9982598-ef5a-4a9e-be04-3215b05d3e97"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="15" width="100" height="20" uuid="7ba7d69a-453e-4023-898d-86c6ec3fcc71"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="15" width="100" height="20" uuid="c67293ab-49b1-479d-8fc7-2e555e4aec91"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="15" width="100" height="20" uuid="baf6bdba-7bb1-44f6-b7ef-63152f929795"/>
+				<textElement>
+					<font isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionPlato}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="50" width="100" height="20" uuid="50dd6b2d-3bd1-4bf1-ba36-ae8449e3fa0d"/>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="50" width="100" height="20" uuid="bb2d90db-f683-4d51-bd4c-bc29f89a1da4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="22" width="572" height="32" uuid="9c34091f-eeff-421d-9dba-c0af007b80ca"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Marin\\Desktop\\Proyecto Final 2016-570 3\\Tonyskinal_2016570\\src\\org\\josemarin\\image\\Encabezadopng2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="61" y="0" width="73" height="39" uuid="2367ba62-870a-4668-9a49-3a25eaa0d196"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Marin\\Desktop\\Proyecto Final 2016-570 3\\Tonyskinal_2016570\\src\\org\\josemarin\\image\\sombreroC.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="137" y="2" width="263" height="20" uuid="5998239e-0bdd-4b67-9ab6-55a780bf5136"/>
+				<text><![CDATA[La buena comida se anuncia a la nariz desde la cocina]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

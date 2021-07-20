@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="600.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.ProductoHasPlatoController">
+   <children>
+      <Label layoutX="181.0" layoutY="33.0" text="Productos_Has_Platos">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="105.0" text="Codigo Producto">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoProducto" layoutX="204.0" layoutY="105.0" prefWidth="150.0" />
+      <Label layoutX="56.0" layoutY="152.0" text="Codigo Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="204.0" layoutY="152.0" prefWidth="150.0" />
+      <TableView fx:id="tblProductosHasPlatos" layoutX="3.0" layoutY="195.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="594.0">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" prefWidth="301.0" text="Codigo Producto" />
+            <TableColumn fx:id="colCodigoPlato" prefWidth="292.0" text="Codigo Servicio" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="118.0" fitWidth="144.0" layoutX="482.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

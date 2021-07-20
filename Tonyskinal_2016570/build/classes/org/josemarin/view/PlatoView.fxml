@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="670.0" style="-fx-background-color: BDB76B; -fx-background-color: BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.PlatoController">
+   <children>
+      <Label layoutX="292.0" layoutY="36.0" prefHeight="38.0" prefWidth="87.0" text="Platos">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="98.0" prefHeight="25.0" prefWidth="107.0" text="Codigo Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="141.0" prefHeight="25.0" prefWidth="107.0" text="Cantidad">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="188.0" text="Nombre Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoPlato" layoutX="151.0" layoutY="98.0" />
+      <TextField fx:id="txtCantidad" layoutX="151.0" layoutY="141.0" />
+      <TextField fx:id="txtNombrePlato" layoutX="151.0" layoutY="188.0" />
+      <Label layoutX="331.0" layoutY="102.0" prefHeight="25.0" prefWidth="132.0" text="Descripcion Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="145.0" prefHeight="25.0" prefWidth="95.0" text="Precio Plato">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="192.0" text="Codigo Tipo Plato ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcionPlato" layoutX="486.0" layoutY="98.0" />
+      <TextField fx:id="txtPrecioPlato" layoutX="486.0" layoutY="141.0" />
+      <TableView fx:id="tblPlatos" layoutX="14.0" layoutY="230.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="647.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPlato" prefWidth="101.0" text="Codigo Plato" />
+          <TableColumn fx:id="colCantidad" prefWidth="79.0" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" prefWidth="111.0" text="Nombre Plato" />
+            <TableColumn fx:id="colDescripcionPlato" prefWidth="133.0" text="Descripcion Plato" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="95.0" text="Precio Plato" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="127.0" text="Codigo Tipo Plato" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="486.0" layoutY="192.0" prefWidth="150.0" />
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="439.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="71.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="98.0" layoutY="439.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="71.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="490.0" layoutY="439.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="71.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="585.0" layoutY="439.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="38.0" prefWidth="71.0" text="Reporte" />
+      <ImageView fitHeight="90.0" fitWidth="95.0" layoutX="481.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

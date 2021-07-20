@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="864.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.ServicioHasEmpleadoController">
+   <children>
+      <Label layoutX="274.0" layoutY="32.0" prefHeight="38.0" prefWidth="339.0" text="Servicios _Has_Empleados">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="108.0" text="Codigo Servicio Empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoServicioEmpleado" layoutX="294.0" layoutY="108.0" />
+      <Label layoutX="37.0" layoutY="152.0" prefHeight="25.0" prefWidth="207.0" text="Servicios Codigo Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="200.0" prefHeight="25.0" prefWidth="253.0" text=" Empleados Codigo Empleado">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="294.0" layoutY="152.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbCodigoEmpleado" layoutX="294.0" layoutY="200.0" prefWidth="150.0" />
+      <Label layoutX="460.0" layoutY="108.0" text="Fecha Evento ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaEvento" layoutX="581.0" layoutY="102.0" prefHeight="38.0" prefWidth="159.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label layoutX="460.0" layoutY="152.0" text="Hora Evento">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHoraEvento" layoutX="591.0" layoutY="152.0" />
+      <Label layoutX="460.0" layoutY="200.0" text="Lugar Evento">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLugarEvento" layoutX="591.0" layoutY="200.0" />
+      <TableView fx:id="tblServiciosHasEmpleados" layoutX="14.0" layoutY="234.0" onKeyReleased="#seleccionarElemento" onMouseDragged="#seleccionarElemento" prefHeight="200.0" prefWidth="848.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicioEmpleado" prefWidth="159.0" text="CodigoServicioEmpleado" />
+            <TableColumn fx:id="colCodigoServicio" prefWidth="108.0" text="Código  Servicio" />
+            <TableColumn fx:id="colCodigoEmpleado" prefWidth="141.0" text="Codigo Empleado" />
+            <TableColumn fx:id="colFechaEvento" prefWidth="105.0" text="Fecha Evento" />
+            <TableColumn fx:id="colHoraEvento" minWidth="0.0" prefWidth="153.0" text="Hora Envento" />
+            <TableColumn fx:id="colLugarEvento" minWidth="0.0" prefWidth="181.0" text="Lugar Evento" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="14.0" layoutY="459.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="45.0" prefWidth="72.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="105.0" layoutY="459.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="45.0" prefWidth="72.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="666.0" layoutY="459.0" mnemonicParsing="false" onAction="#editar" prefHeight="45.0" prefWidth="72.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="756.0" layoutY="459.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="45.0" prefWidth="72.0" text="Reporte" />
+      <ImageView fitHeight="109.0" fitWidth="137.0" layoutX="753.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

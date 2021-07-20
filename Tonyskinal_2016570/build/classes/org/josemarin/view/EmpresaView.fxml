@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="700.0" style="-fx-background-color: #BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.EmpresaController">
+   <children>
+      <Label layoutX="23.0" layoutY="36.0" prefHeight="26.0" prefWidth="134.0" text="Codigo Empresa">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <TextField fx:id="txtCodigoEmpresa" editable="false" layoutX="157.0" layoutY="34.0" />
+      <TextField fx:id="txtNombreEmpresa" editable="false" layoutX="157.0" layoutY="71.0" prefHeight="31.0" prefWidth="277.0" />
+      <TextField fx:id="txtDireccionEmpresa" editable="false" layoutX="157.0" layoutY="106.0" prefHeight="31.0" prefWidth="277.0" />
+      <TextField fx:id="txtTelefonoEmpresa" editable="false" layoutX="157.0" layoutY="146.0" />
+      <TableView fx:id="tblEmpresa" layoutX="14.0" layoutY="217.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="211.0" prefWidth="641.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpresa" prefWidth="148.0" text="Codigo Empresa" />
+          <TableColumn fx:id="colNombreEmpresa" minWidth="2.0" prefWidth="157.0" text="Nombre Empresa" />
+            <TableColumn fx:id="colDireccionEmpresa" prefWidth="180.0" text="Direccion " />
+            <TableColumn fx:id="colTelefonoEmpresa" prefWidth="155.0" text="Telefono " />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="46.0" layoutY="462.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="80.0" prefWidth="124.0" text="Nuevo " />
+      <Button fx:id="btnEliminar" layoutX="182.0" layoutY="462.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="80.0" prefWidth="124.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="322.0" layoutY="462.0" mnemonicParsing="false" onAction="#editar" prefHeight="80.0" prefWidth="124.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="465.0" layoutY="462.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="80.0" prefWidth="124.0" text="Reporte" />
+      <AnchorPane layoutX="497.0" layoutY="14.0" prefHeight="144.0" prefWidth="156.0">
+         <children>
+            <ImageView fitHeight="90.0" fitWidth="101.0" layoutX="-31.0" layoutY="-9.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="70.0" layoutY="-9.0" onMouseClicked="#ventanaPresupuestos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/presupuesto.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="217.0" fitWidth="156.0" layoutX="-19.0" layoutY="95.0" onMouseClicked="#ventanaServicio" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/ImagenServicio.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="23.0" layoutY="75.0" prefHeight="26.0" prefWidth="134.0" text="Nombre Empresa">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="109.0" prefHeight="26.0" prefWidth="134.0" text="Direccion">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="148.0" prefHeight="26.0" prefWidth="134.0" text="Telefono">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

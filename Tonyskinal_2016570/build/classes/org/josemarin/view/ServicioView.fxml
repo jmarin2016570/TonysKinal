@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="793.0" style="-fx-background-color: BDB76B; -fx-border-color: BDB76B;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josemarin.controller.ServicioController">
+   <children>
+      <Label layoutX="392.0" layoutY="29.0" prefHeight="30.0" prefWidth="140.0" text="Servicios">
+         <font>
+            <Font name="System Bold Italic" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="108.0" text="Codigo Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="150.0" text="Fecha Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="188.0" text="Tipo Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="227.0" text="Codigo Empresa">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="381.0" layoutY="108.0" text="Hora Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="378.0" layoutY="150.0" text="Lugar Servicio">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="188.0" text="Telefono Contacto">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoServicio" layoutX="191.0" layoutY="108.0" />
+      <TextField fx:id="txtTipoServicio" layoutX="191.0" layoutY="188.0" />
+      <GridPane fx:id="grpFechaServicio" layoutX="193.0" layoutY="151.0" prefHeight="25.0" prefWidth="149.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="191.0" layoutY="230.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="txtHoraServicio" layoutX="527.0" layoutY="108.0" />
+      <TextField fx:id="txtLugarServicio" layoutX="527.0" layoutY="150.0" />
+      <TextField fx:id="txtTelefonoContacto" layoutX="527.0" layoutY="188.0" />
+      <TableView fx:id="tblServicios" layoutX="21.0" layoutY="270.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="751.0">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="100.0" text="Codigo Servicio" />
+          <TableColumn fx:id="colFechaServicio" minWidth="8.0" prefWidth="97.0" text="Fecha Servicio " />
+            <TableColumn fx:id="colTipoServicio" minWidth="8.0" prefWidth="103.0" text="Tipo Servicio" />
+            <TableColumn fx:id="colHoraServicio" minWidth="8.0" prefWidth="112.0" text="Hora Servicio" />
+            <TableColumn fx:id="colLugarServicio" minWidth="8.0" prefWidth="112.0" text=" Lugar Servicio" />
+            <TableColumn fx:id="colTelContacto" minWidth="8.0" prefWidth="112.0" text="Tel.Contacto" />
+            <TableColumn fx:id="colCodigoEmpresa" minWidth="8.0" prefWidth="112.0" text="Codigo Empresa" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="100.0" fitWidth="118.0" layoutX="686.0" layoutY="8.0" onMouseClicked="#ventanaEmpresas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/4ba0f0d6d1d5cc5d22bec1c4b9cfef8e.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="31.0" layoutY="488.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="38.0" prefWidth="76.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="125.0" layoutY="488.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="38.0" prefWidth="76.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="575.0" layoutY="488.0" mnemonicParsing="false" onAction="#editar" prefHeight="38.0" prefWidth="76.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="676.0" layoutY="488.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="38.0" prefWidth="76.0" text="Reporte" />
+   </children>
+</AnchorPane>
